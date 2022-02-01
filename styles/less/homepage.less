@@ -1,0 +1,36 @@
+@import (once) "./variables";
+
+@import (multiple) "./general-desktop";
+
+
+/* DESKTOP SMALL RESIZE START */
+@media screen and (max-width: @sizes[page-desktop-breakpoint-width]) and (min-width: @sizes[page-mobile-max-width]) {
+
+  @ratioFullPage: ((1/unit(@sizes[page-desktop-max-width])) * 100vw);
+  @ratio: ((1/unit(@sizes[page-desktop-breakpoint-width])) * 100vw);
+
+	@import (multiple) "./general-desktop";
+}
+/* DESKTOP SMALL RESIZE END */
+
+/* DESKTOP ONLY START */
+@media screen and (min-width: @sizes[page-mobile-max-width]) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+/* DESKTOP ONLY END */
+
+/* MOBILE ONLY START */
+@media screen and (max-width: @sizes[page-mobile-max-width]) {
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  @ratio: ((1/unit(@sizes[page-mobile-width])) * 100vw);
+  @ratioFullPage: ((1/unit(@sizes[page-mobile-width])) * 100vw);
+
+	@import (multiple) "./general-mobile";
+}
+/* MOBILE ONLY END */
