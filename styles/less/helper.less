@@ -1,0 +1,52 @@
+.size(@width, @height) {
+  width: calc(@width * @ratio);
+  height: calc(@height * @ratio);
+}
+
+.background-image (@url, @size) {
+  background-image: url(@url);
+  background-size: @size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contain(@url) {
+  .background-image(@url, contain);
+}
+
+.cover(@url) {
+  .background-image(@url, cover);
+}
+
+.background-image-empty(@size) {
+  background-size: @size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contain-empty {
+  .background-image-empty(contain);
+}
+
+.cover-empty {
+  .background-image-empty(cover);
+}
+
+.pseudo {
+  content: "";
+}
+
+.pseudo-block {
+  .pseudo;
+  display: block;
+}
+
+.pseudo-absolute {
+  .pseudo-block;
+  position: absolute;
+}
+
+.font(@font-size, @line-height) {
+  font-size: calc(@font-size * @ratio);
+  line-height: calc(@line-height * @ratio);
+}

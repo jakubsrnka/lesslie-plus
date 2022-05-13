@@ -1,5 +1,6 @@
 @import (once) "./variables";
 
+@import (multiple) "./helper";
 @import (multiple) "./general-desktop";
 
 
@@ -9,6 +10,7 @@
   @ratioFullPage: ((1/unit(@sizes[page-desktop-max-width])) * 100vw);
   @ratio: ((1/unit(@sizes[page-desktop-breakpoint-width])) * 100vw);
 
+  @import (multiple) "./helper";
 	@import (multiple) "./general-desktop";
 }
 /* DESKTOP SMALL RESIZE END */
@@ -31,6 +33,7 @@
   @ratio: ((1/unit(@sizes[page-mobile-width])) * 100vw);
   @ratioFullPage: ((1/unit(@sizes[page-mobile-width])) * 100vw);
 
+  @import (multiple) "./helper";
 	@import (multiple) "./general-mobile";
 }
 /* MOBILE ONLY END */
