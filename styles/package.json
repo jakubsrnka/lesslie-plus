@@ -23,7 +23,7 @@
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "mini-css-extract-plugin": "^1.0.0",
-    "postcss": "^8.1.1",
+    "postcss": "^8.4.7",
     "postcss-loader": "^4.0.4",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
